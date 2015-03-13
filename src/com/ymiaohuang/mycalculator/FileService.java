@@ -31,7 +31,7 @@ public class FileService {
 		fos.write(content.getBytes());
 		fos.close();
 	}
-	
+	/*jintian haowuliao*/
 	
 	/**
 	 * 读取文件内容
