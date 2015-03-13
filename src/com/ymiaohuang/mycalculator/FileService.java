@@ -9,9 +9,9 @@ import android.content.Context;
 
 public class FileService {
 	/**
-	 * ±£´æÎÄ¼ş
-	 * @param filename ÎÄ¼şÃû³Æ
-	 * @param content ÎÄ¼şÄÚÈİ
+	 * ä¿å­˜æ–‡ä»¶
+	 * @param filename æ–‡ä»¶åç§°
+	 * @param content æ–‡ä»¶å†…å®¹
 	 * 
 	 * */
 	private Context context;
@@ -20,8 +20,8 @@ public class FileService {
 	}
 	
 	public void save(String filename, String content) throws Exception {
-		//Ë½ÓĞ²Ù×÷Ä£Ê½£º´´½¨³öÀ´µÄÎÄ¼şÖ»ÄÜ±»±¾Ó¦ÓÃ·ÃÎÊ£¬ÆäËûÓ¦ÓÃÎŞ·¨·ÃÎÊ¸ÃÎÄ¼ş¡£
-		//Ğ´ÈëµÄÄÚÈİ»á¸²¸ÇÔ­ÎÄ¼şµÄÄÚÈİ¡£
+		//ç§æœ‰æ“ä½œæ¨¡å¼ï¼šåˆ›å»ºå‡ºæ¥çš„æ–‡ä»¶åªèƒ½è¢«æœ¬åº”ç”¨è®¿é—®ï¼Œå…¶ä»–åº”ç”¨æ— æ³•è®¿é—®è¯¥æ–‡ä»¶ã€‚
+		//å†™å…¥çš„å†…å®¹ä¼šè¦†ç›–åŸæ–‡ä»¶çš„å†…å®¹ã€‚
 		FileOutputStream fos = context.openFileOutput(filename,Context.MODE_PRIVATE);
 		write(content, fos);
 		
@@ -31,12 +31,11 @@ public class FileService {
 		fos.write(content.getBytes());
 		fos.close();
 	}
-	/*jintian haowuliao*/
 	
 	/**
-	 * ¶ÁÈ¡ÎÄ¼şÄÚÈİ
-	 * @param filename ÎÄ¼şÃû³Æ
-	 * @return ÎÄ¼şÄÚÈİ
+	 * è¯»å–æ–‡ä»¶å†…å®¹
+	 * @param filename æ–‡ä»¶åç§°
+	 * @return æ–‡ä»¶å†…å®¹
 	 * @throws Exception
 	 */
 	public String read(String filename)throws Exception{
